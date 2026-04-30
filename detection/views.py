@@ -31,6 +31,7 @@ def upload_image(request):
         # Store structured results
         detection.crop_type = result['crop_disease'].split(' - ')[0]
         detection.disease = result['crop_disease'].split(' - ')[1]
+        detection.scientific_name = result['scientific_name']
         detection.confidence = result['confidence']
         detection.treatment = result['treatment']
         detection.prevention = result['prevention']

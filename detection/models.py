@@ -6,6 +6,7 @@ class Detection(models.Model):
     image = models.ImageField(upload_to='crop_images/')
     crop_type = models.CharField(max_length=100, blank=True)
     disease = models.CharField(max_length=100, blank=True)
+    scientific_name = models.CharField(max_length=200, blank=True)
     confidence = models.FloatField(default=0.0)
     recommendation = models.TextField(blank=True)
     treatment = models.TextField(blank=True)
