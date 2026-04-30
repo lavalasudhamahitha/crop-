@@ -30,7 +30,7 @@ def save_initial_model():
     Note: This model needs to be trained on real data to be accurate!
     """
     print("Creating initial model for crop detection...")
-    num_classes = 5
+    num_classes = 38
     model = build_model(num_classes)
     
     model_path = 'crop_model.h5'
