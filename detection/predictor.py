@@ -29,20 +29,35 @@ class CropPredictor:
         
         # Comprehensive scientific recommendations
         self.recommendations = {
+            'Tomato - Healthy': {
+                'treatment': 'No treatment needed.',
+                'prevention': 'Maintain consistent watering (avoiding leaves), ensure good air circulation, and monitor for pests regularly.',
+                'care_tips': 'Apply organic mulch to retain moisture and prevent soil-borne diseases from splashing onto leaves.'
+            },
+            'Tomato - Early Blight': {
+                'treatment': 'Apply fungicides like chlorothalonil, mancozeb, or copper-based sprays. Remove lower infected leaves and keep foliage dry.',
+                'prevention': 'Rotate crops. Use drip irrigation. Mulch around plants to prevent soil spores from splashing onto leaves.',
+                'care_tips': 'Maintain plant vigor with balanced fertilizer; weak plants are more susceptible to Early Blight.'
+            },
             'Tomato - Late Blight': {
                 'treatment': 'Apply fungicides containing copper, chlorothalonil, or mancozeb. Remove and destroy infected foliage immediately.',
                 'prevention': 'Ensure proper spacing for airflow. Use drip irrigation instead of overhead watering. Plant resistant varieties.',
                 'care_tips': 'Monitor weather; cool, wet conditions favor spread. Avoid working in the garden when plants are wet.'
             },
-            'Tomato - Healthy': {
-                'treatment': 'None required.',
-                'prevention': 'Maintain consistent watering and balanced fertilization. Monitor for early signs of pests.',
-                'care_tips': 'Apply mulch to keep soil moisture even and suppress weeds.'
+            'Tomato - Yellow Leaf Curl Virus': {
+                'treatment': 'There is no cure for the virus. Remove and destroy infected plants immediately to prevent spread.',
+                'prevention': 'Control whiteflies using insecticidal soaps or neem oil. Use reflective mulches to repel insects.',
+                'care_tips': 'Plant resistant varieties and keep the area free of weeds that can host whiteflies.'
             },
             'Potato - Early Blight': {
                 'treatment': 'Use fungicides like chlorothalonil or copper-based sprays. Remove lower infected leaves.',
                 'prevention': 'Rotate crops. Avoid over-fertilizing with nitrogen early in the season.',
                 'care_tips': 'Harvest early if the disease is spreading rapidly toward the end of the season.'
+            },
+            'Potato - Late Blight': {
+                'treatment': 'Apply fungicides such as Ridomil Gold or copper sprays. Destroy all infected tubers.',
+                'prevention': 'Plant certified disease-free seed potatoes. Avoid overhead irrigation.',
+                'care_tips': 'Kill vines 2 weeks before harvest to prevent tuber infection from spores on leaves.'
             },
             'Corn - Common Rust': {
                 'treatment': 'Apply foliar fungicides if infection is severe and occurs early. Late infections rarely require treatment.',
@@ -54,12 +69,21 @@ class CropPredictor:
                 'prevention': 'Use resistant cultivars. Avoid excessive nitrogen fertilizer. Maintain field sanitation.',
                 'care_tips': 'Maintain proper flooding levels to reduce stress on the plants.'
             },
+            'Grape - Black Rot': {
+                'treatment': 'Apply fungicides containing myclobutanil or captan. Prune and remove all infected fruit (mummies) and vines.',
+                'prevention': 'Choose resistant cultivars. Ensure full sun exposure and good air drainage in the vineyard.',
+                'care_tips': 'Prune during dormancy to increase airflow and sunlight penetration.'
+            },
+            'Peach - Bacterial Spot': {
+                'treatment': 'Apply copper-based sprays during the dormant season and early spring. Avoid excessive nitrogen.',
+                'prevention': 'Plant resistant varieties. Maintain proper tree pruning for airflow.',
+                'care_tips': 'Avoid overhead irrigation that keeps leaves wet for long periods.'
+            },
             'Apple - Scab': {
-                'treatment': 'Apply sulfur or copper-based fungicides in early spring.',
-                'prevention': 'Rake and destroy fallen leaves in autumn to reduce overwintering spores.',
-                'care_tips': 'Prune trees to improve sunlight penetration and air movement.'
+                'treatment': 'Apply fungicides such as myclobutanil or captan during the growing season. Remove fallen leaves.',
+                'prevention': 'Rake and destroy leaves in the fall. Choose scab-resistant varieties like Liberty or Freedom.',
+                'care_tips': 'Thin fruit to improve air circulation and reduce moisture retention.'
             }
-            # Fallback for others
         }
         self._load_model()
 

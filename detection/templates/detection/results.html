@@ -25,8 +25,7 @@
                 {{ detection.disease }}
             </span>
             <h1 style="font-size: 2rem; margin-bottom: 0.5rem;">{{ detection.crop_type }}</h1>
-            <p style="color: var(--text-light); margin-bottom: 2rem;">Detected on {{ detection.created_at|date:"F d, Y
-                \at H:i" }}</p>
+            <p style="color: var(--text-light); margin-bottom: 2rem;">Detected on {{ detection.created_at|date:"F d, Y" }} at {{ detection.created_at|date:"H:i" }}</p>
 
             <div style="margin-bottom: 2rem;">
                 <h3 style="margin-bottom: 0.8rem; color: #b91c1c;">Treatment Plan</h3>
